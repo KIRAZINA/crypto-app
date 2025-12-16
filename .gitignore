@@ -38,3 +38,8 @@ build/
 .DS_Store
 
 src/main/resources/com/project021/demo1/database.properties
+
+crypto.db
+.idea/
+out/
+*.jar
