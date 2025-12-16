@@ -17,7 +17,7 @@ public class Database {
                     "/com/project021/demo1/database.properties");
 
             if (input == null) {
-                throw new RuntimeException("Файл конфигурации не найден!");
+                throw new RuntimeException("Configuration file not found!");
             }
 
             Properties prop = new Properties();
@@ -29,7 +29,7 @@ public class Database {
             initializeDatabase();
 
         } catch (Exception e) {
-            throw new RuntimeException("Ошибка инициализации БД: " + e.getMessage(), e);
+            throw new RuntimeException("Database initialization error: " + e.getMessage(), e);
         }
     }
 
@@ -48,7 +48,7 @@ public class Database {
                     "master_key TEXT)");
 
         } catch (SQLException e) {
-            throw new RuntimeException("Ошибка создания таблицы: " + e.getMessage());
+            throw new RuntimeException("Table creation error: " + e.getMessage());
         }
     }
 

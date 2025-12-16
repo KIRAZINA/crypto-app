@@ -59,7 +59,6 @@ public class MainController {
 
     public static void generateInitialKeysAndSave(User user, Database database) {
         try {
-            // Генерация мастер-ключа
             KeyGenerator keyGen = KeyGenerator.getInstance("AES");
             keyGen.init(256);
             SecretKey masterKey = keyGen.generateKey();
